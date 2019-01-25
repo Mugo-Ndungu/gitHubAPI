@@ -1,0 +1,19 @@
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.buttonz{
+  padding: 15px 25px;
+  color: #000;
+  background-color: #22fca3;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+}
+h2{
+  font-weight: bolder;
+}
