@@ -1,23 +1,31 @@
-.container-fluid {
+.container {
   width: 100%;
+  top: 20px;
   height: 100vh;
   padding: 20px;
-  background-color: #cd982e;
+  color: #fff;
+  background-color: #2b261d;
 }
 
-.image {
-  border-radius: 20%;
-  width: 10px;
-  height: 100px;
-  float: right;
-  margin-right: 50px;
-  padding: 10px;
-}
+
 .labelz{
-  padding: 15px 20px;
-  background-color: aqua;
-  font-size: 18px;
+  padding: 10px 15px;
+  background-color: grey;
+  font-size: 13px;
+  border-radius: 20px;
 
+}
+.labels{
+  padding: 10px 15px;
+  background-color: #cd982e;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.labelx{
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: darkolivegreen;
+  font-size: 13px;
 }
 
 .details {
@@ -68,6 +76,8 @@ input {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
+  border-radius: 20px;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -79,7 +89,7 @@ i {
   color: #80d6;
 }
 span{
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .buttons p {

@@ -1,13 +1,13 @@
 <div *ngIf="user" class="container">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <strong>{{user.username}}</strong><span *ngIf="user.company">, Works at {{user.company}}</span>
+    <h2>  <strong>{{user.username}}</strong></h2><span *ngIf="user.company">, Works at {{user.company}}</span>
       {{user.location}}
     </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-sm-3">
-          <img src="{{user.image}}" class="img-circle img-responsive" alt="Profile Picture">
+          <img src="{{user.image}}" class="image" alt="Profile Picture">
         </div>
         <div class="col-sm-5">
           <ul class="list-group">
@@ -22,12 +22,12 @@
             <p>
               <span class="labelz label-default">Followers {{user.numFollowers}}</span>
               <span class="labels label-primary">Following {{user.numFollowing}}</span>
-              <span class="label label-info">Public Repos {{user.repo}}</span>
+              <span class="labelx label-info">Public Repos {{user.repo}}</span>
             </p>
             <p><a class="btn btn-success btn-sm" routerLink = "{{user.reposite}}">View profile on GitHub</a></p>
             <div class="panel panel-deafult">
               <div class="panel-heading">
-                
+
                 <h3 class="panel-title">Repos</h3>
               </div>
               <!-- <div class="panel-body" *ngFor="let repo of repos">
