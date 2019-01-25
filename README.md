@@ -1,5 +1,28 @@
 # GitHubAPI
 
+This is a web application where users can view and search github profiles.
+
+#### By ** Mugo Ndungu **
+
+## Description
+This is a website where a user can search for their github repository and also search for other github users. The user can also view my profile and my details such number of repositories.
+
+## Setup/Installation Requirements
+* Ensure you have a web browser
+* Clink on the website link provided
+* Internet connection is required
+
+## Behaviour driven Development (BDD)
+|#User inputs   |  #Example outputs |         
+|---------------|-------------------|
+|When it receives:               | It should return:                  |
+| User enters username              | The user profile is displayed                 |
+| User enters repository name              | The repository is displayed                  |
+
+## Known Bugs
+There are no known bugs as at now but in case of any you may find please contact me.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server
