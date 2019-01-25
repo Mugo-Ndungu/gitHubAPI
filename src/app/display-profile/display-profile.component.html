@@ -1,68 +1,44 @@
-<div *ngIf="user" class="container">
+<app-nav></app-nav>
+<div class="container-fluid">
+  <form>
+    <input type="text" placeholder="Search GitHub User" id="search-bar" [(ngModel)]="username" name="username" (keyup)="getUsers()">
+  </form>
   <div class="panel panel-default">
-    <div class="panel-heading">
-    <h2>  <strong>{{user.username}}</strong></h2><span *ngIf="user.company">, Works at {{user.company}}</span>
-      {{user.location}}
-    </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-sm-3">
-          <img src="{{user.image}}" class="image" alt="Profile Picture">
-        </div>
-        <div class="col-sm-5">
-          <ul class="list-group">
-            <li class="list-group-item" *ngIf="user.bio">{{user.bio}}</li>
-            <li class="list-group-item" *ngIf="user.email">{{user.email}}</li>
-            <li class="list-group-item" *ngIf="user.blog">{{user.blog}}</li>
-            <li class="list-group-item" *ngIf="user.hireable">Available for Hire</li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <div>
-            <p>
-              <span class="labelz label-default">Followers {{user.numFollowers}}</span>
-              <span class="labels label-primary">Following {{user.numFollowing}}</span>
-              <span class="labelx label-info">Public Repos {{user.repo}}</span>
-            </p>
-            <p><a class="btn btn-success btn-sm" routerLink = "{{user.reposite}}">View profile on GitHub</a></p>
-            <div class="panel panel-deafult">
-              <div class="panel-heading">
-
-                <h3 class="panel-title">Repos</h3>
+    <div *ngIf="profile">
+      <div>
+        <div class="containerd">
+          <div class="row justify-content-center ">
+            <div class="col-md-4">
+              <div class="card">
+                <h4 appHighlight class="card-title"><strong>{{profile.name}}</strong></h4>
+                <div class="card-body">
+                  <img class="card-img-top" src="{{profile.avatar_url}}" alt="Card image cap">
+                </div>
               </div>
-              <!-- <div class="panel-body" *ngFor="let repo of repos">
-                <p></p>
-              </div> -->
             </div>
           </div>
         </div>
+        <div class="buttz">
+          <span class=" btn btn-info sp label-default">Followers {{profile.followers}}</span>
+          <span class="btn btn-success sp label-primary">Following {{profile.following}}</span>
+          <span class="btn btn-secondary sp label-info">Public Repos {{profile.public_repos}}</span>
+          <span><a class="btn btn-primary" target="" routerLink=" {{profile.url}} "><i class="fas fa-external-link-alt"></i> GitHub</a></span>
+        </div>
       </div>
     </div>
   </div>
+  <div class="   row panel-default">
+    <div *ngFor="let repo of repos" class="col-md-4  text-center">
+      <div class="dimps">
+        <h3 class=" label card-title">Repository</h3>
+        <div class="panel-heading">
+        <h2><strong>{{repo.name}}</strong></h2>
+      </div>
+      <div class="panel-body">
+        <p>{{repo.description}}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <a class="bt" routerLink = ""><i class="fas fa-step-forward"></i> Back Home</a>
 </div>
-
-<!-- <div class="container-fluid">
-  <div class="form-group row">
-    <input type="text" placeholder="Search" [(ngModel)]="currentUser" name="currUser" #currUser="ngModel" id="currUser" class="form-control">
-  </div>
-  <div class="row first-row">
-
-    <img src="{{user.image}}" alt="Github Profile Image" class="image img-responsive"> -->
-
-<!-- End of image info -->
-<!-- <div class="details">
-      <p appHighlight>{{user.names}}</p>
-      <div class="number">
-        <p>Followers <br> <span>{{user.numFollowers}}</span> </p>
-        <p>Following <br> <span>{{user.numFollowing}}</span> </p>
-        <p>Repositories <br> <span>{{user.repo}}</span></p>
-      </div>
-    </div>
-    <br>
-    <div class="buttons">
-      <button type="button" name="button" class="btn"> <a href="{{user.reposite}}">Visit Github Account</a></button>
-      <button type="button" name="button" class="btn "> <a href="{{user.reposite}}">View all Repositories</a></button>
-      <p>Created {{user.time |date }} - {{user.time | time}} days ago </p>
-    </div>
-  </div>
-</div> -->

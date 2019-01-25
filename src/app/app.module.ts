@@ -7,15 +7,17 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TimePipe } from './time.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    // NgModule,
     TimePipe,
-    HighlightDirective
+    HighlightDirective,
+    NavComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

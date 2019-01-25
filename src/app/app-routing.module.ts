@@ -4,7 +4,7 @@ import { HomeComponent} from './home/home.component';
 import { DisplayProfileComponent} from './display-profile/display-profile.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'displayProf', component: DisplayProfileComponent },
 ];
 
